@@ -15,4 +15,3 @@ class Product:
     def __str__(self):
         return f"{self._name} {self.get_price_string()}"
 
-    
