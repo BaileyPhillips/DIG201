@@ -5,7 +5,7 @@ print("At Bailey's Shoes, we strive to help you find the "
 
 RUNNING_SHOES = "Running Shoes"
 SPORTS_SHOES = "Sports Shoes"
-EVERYDAY_SHOES = "Everday Shoes"
+EVERYDAY_SHOES = "Everyday Shoes"
 
 print("Which type of shoes are you looking for?")
 print("1.", RUNNING_SHOES)
