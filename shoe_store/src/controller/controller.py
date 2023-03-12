@@ -18,28 +18,28 @@ class Controller:
 
     def initialize_store_data(self):
         all_running_shoes = [
-            Product("Nike Air Max", 10),
-            Product("Adidas Ultra Boost", 20),
-            Product("Asics Gel Kayano", 30),
-            Product("New Balance 574", 40),
-            Product("Puma Clyde", 50),
-            Product("Vans Old Skool", 60)
+            Product("Nike Air Max", 180),
+            Product("Adidas Ultra Boost", 230),
+            Product("Asics Gel Kayano", 150),
+            Product("New Balance 574", 100),
+            Product("Puma Clyde", 80),
+            Product("Vans Old Skool", 70)
         ]
         all_sports_shoes = [
-            Product("Nike Air Max", 10),
             Product("Adidas Ultra Boost", 20),
             Product("Asics Gel Kayano", 30),
             Product("New Balance 574", 40),
             Product("Puma Clyde", 50),
             Product("Vans Old Skool", 60)
+
         ]
         all_everyday_shoes = [
-            Product("Nike Air Max", 10),
-            Product("Adidas Ultra Boost", 20),
-            Product("Asics Gel Kayano", 30),
-            Product("New Balance 574", 40),
-            Product("Puma Clyde", 50),
-            Product("Vans Old Skool", 60)
+            Product("Converse Chuck Taylor All Star", 80),
+            Product("Vans Classic Slip-On", 90),
+            Product("Adidas Stan Smith", 100),
+            Product("Reebok Classic Leather", 90),
+            Product("Puma Cali", 110),
+            Product("New Balance 990", 200)
         ]
 
 
