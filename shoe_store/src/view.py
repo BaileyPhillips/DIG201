@@ -73,7 +73,7 @@ subtotal = 0.0
 for item in cart:
     subtotal += item.get_product().get_price()
 
-TAX_RATE = 0.08
+TAX_RATE = 0.15
 tax = subtotal * TAX_RATE
 grandtotal = subtotal + tax
 
