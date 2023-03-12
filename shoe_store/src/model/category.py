@@ -26,6 +26,6 @@ class Category:
             self.add_product(product)
 
     def __str__(self):
-        return f"{self._name} with {len(self._products)} products"
+        return f"{self._name}"
 
     
