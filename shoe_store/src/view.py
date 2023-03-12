@@ -90,13 +90,81 @@ print()
 print(money_template("Grand Total", grandtotal))
 
 print("\nPlease fill in your billing details")
-first_name = input("First Name: ")
-last_name = input("Last Name: ")
-billing_address = input("Billing address: ")
-city = input("City: ")
 
-card = input("Credit card number (XXXX-XXXX-XXXX-XXXX): ")
-expiration = input("Expiration (mm/yy): ")
-name_on_card = input("Name on card: ")
-cvv = input("CVV: ")
+# Check for first name input
+while True:
+    first_name = input("First Name: ")
+    if not first_name.isalpha():
+        print("Error: Please enter a valid first name (only alphabets are allowed).")
+    else:
+        break
+
+# Check for last name input
+while True:
+    last_name = input("Last Name: ")
+    if not last_name.isalpha():
+        print("Error: Please enter a valid last name (only alphabets are allowed).")
+    else:
+        break
+
+# Check for billing address input (confirm that it is a New Zealand address)
+while True:
+    billing_address = input("Billing address: ")
+    nz_confirmation = input("Is your billing address in New Zealand? (y/n): ")
+    if not billing_address:
+        print("Error: Please enter a valid billing address.")
+    elif nz_confirmation.lower() != "y":
+        print("Sorry, we only accept billing addresses in New Zealand.")
+    else:
+        break
+
+# Check for city input (only New Zealand cities, regions, and towns allowed)
+while True:
+    city = input("City: ")
+    allowed_cities = ["Auckland", "Wellington", "Christchurch", "Hamilton", "Dunedin", "Tauranga"]
+    allowed_regions = ["Northland", "Auckland", "Waikato", "Bay of Plenty", "Gisborne", "Hawke's Bay", "Taranaki",
+                       "Manawatu-Whanganui", "Wellington", "Marlborough", "Nelson", "Tasman", "West Coast",
+                       "Canterbury", "Otago", "Southland"]
+    allowed_towns = ["Oamaru", "Wanaka", "Whakatane", "Arrowtown", "Te Anau"]
+    if city.capitalize() not in allowed_cities and city.capitalize() not in allowed_regions and city.capitalize() not in allowed_towns:
+        print("Error: Please enter a valid New Zealand city, region, or town.")
+    else:
+        break
+
+# Check for credit card number input (16 digits)
+while True:
+    card = input("Credit card number (XXXX-XXXX-XXXX-XXXX): ")
+    if len(card.replace("-", "")) != 16:
+        print("Error: Please enter a valid 16-digit credit card number.")
+    else:
+        break
+
+# Check for expiration input (mm/yy format)
+while True:
+    expiration = input("Expiration (mm/yy): ")
+    exp_parts = expiration.split("/")
+    if len(exp_parts) != 2 or not exp_parts[0].isdigit() or not exp_parts[1].isdigit():
+        print("Error: Please enter a valid expiration date (mm/yy format).")
+    elif not 1 <= int(exp_parts[0]) <= 12:
+        print("Error: Please enter a valid month number (1-12).")
+    else:
+        break
+
+# Check for name on card input (first name and last name only)
+while True:
+    name_on_card = input("Name on card: ")
+    name_parts = name_on_card.split()
+    if len(name_parts) != 2 or not name_parts[0].isalpha() or not name_parts[1].isalpha():
+        print("Error: Please enter a valid name (first name and last name only).")
+    else:
+        break
+
+# Check for CVV input (3 digits)
+while True:
+    cvv = input("CVV: ")
+    if not cvv.isdigit() or len(cvv) != 3:
+        print("Error: Please enter a valid 3-digit CVV code.")
+    else:
+        break
+
 
