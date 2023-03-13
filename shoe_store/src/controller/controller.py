@@ -26,11 +26,11 @@ class Controller:
             Product("Vans Old Skool", 70)
         ]
         all_sports_shoes = [
-            Product("Adidas Ultra Boost", 20),
-            Product("Asics Gel Kayano", 30),
-            Product("New Balance 574", 40),
-            Product("Puma Clyde", 50),
-            Product("Vans Old Skool", 60)
+            Product("Adidas Ultra Boost", 250),
+            Product("Asics Gel Kayano", 300),
+            Product("New Balance 574", 150),
+            Product("Puma Clyde", 120),
+            Product("Vans Old Skool", 130)
 
         ]
         all_everyday_shoes = [

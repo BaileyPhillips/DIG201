@@ -88,7 +88,7 @@ print(money_template("Subtotal", subtotal))
 print(money_template("Tax", tax))
 print()
 print(money_template("Grand Total", grandtotal))
-
+print("-"*55)
 print("\nPlease fill in your billing details")
 
 # Check for first name input
