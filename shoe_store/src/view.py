@@ -167,4 +167,4 @@ while True:
     else:
         break
 
-
+print("Thank you for shopping at Bailey's Shoe's. At Bailey's Shoe's we strive to provide quality shoes!")
