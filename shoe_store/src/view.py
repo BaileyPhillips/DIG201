@@ -29,7 +29,18 @@ while not CHECKOUT_FLAG:
     print("Which type of shoes are you looking for?")
     categories = store.get_categories()
     enumerate_list(categories)
-    user_input = int(input()) - 1
+
+    # Prompt the user for input and validate it
+    valid_input = False
+    while not valid_input:
+        user_input = input()
+        if user_input.isdigit() and int(user_input) in range(1, len(categories) + 1):
+            valid_input = True
+        else:
+            print("Please enter a the number of the 3 given options.")
+
+    # Subtract 1 from the user input to get the correct index
+    user_input = int(user_input) - 1
 
     selected_category = categories[user_input]
 
