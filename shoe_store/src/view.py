@@ -17,7 +17,7 @@ def print_cart():
 controller = Controller()
 store = controller.get_store()
 cart = controller.get_cart()
-
+#welcome message
 print("Welcome to Bailey's Shoes!")
 print("At Bailey's Shoes, we strive to help you find the "
       "perfect shoes for your style, whether you're looking"
@@ -25,6 +25,7 @@ print("At Bailey's Shoes, we strive to help you find the "
 
 CHECKOUT_FLAG = False
 
+# outputs the 3 options, running shoes, sports shoes or everyday shoe
 while not CHECKOUT_FLAG:
     print("Which type of shoes are you looking for?")
     categories = store.get_categories()
@@ -44,12 +45,12 @@ while not CHECKOUT_FLAG:
 
     selected_category = categories[user_input]
 
-
+# asking the user what model of the shoe they would like
     print(f"\nYou selected {selected_category}. Which model would you like?")
     products = selected_category.get_products()
     enumerate_list(products)
     user_input = int(input()) - 1
-
+# aaking the user what size of that model they would like
     selected_model = products[user_input]
     print(f"\nYou selected {selected_model}. What size would you like?")
 
@@ -57,7 +58,7 @@ while not CHECKOUT_FLAG:
     item = CartItem(selected_model, size)
     cart.append(item)
 
-
+# giving the user the option to view card, continue shopping, or checkout and pay
     while True:
         print("\nWhat would you like to do?")
         options = ["View Cart", "Continue Shopping", "Checkout"]
@@ -83,7 +84,7 @@ print_cart()
 subtotal = 0.0
 for item in cart:
     subtotal += item.get_product().get_price()
-
+# tax that the user has to pay
 TAX_RATE = 0.15
 tax = subtotal * TAX_RATE
 grandtotal = subtotal + tax
@@ -93,7 +94,7 @@ def money_template(title, cost):
     return f"{title}:".ljust(20) + "${:0.2f}".format(cost).rjust(35)
 
 
-
+# prints the price of the shoe, or shoes, gives them the amount of tax then the grand total of tax + subtotal
 print("-"*55)
 print(money_template("Subtotal", subtotal))
 print(money_template("Tax", tax))
@@ -177,5 +178,5 @@ while True:
         print("Error: Please enter a valid 3-digit CVV code.")
     else:
         break
-
+# gives last message
 print("Thank you for shopping at Bailey's Shoe's. At Bailey's Shoe's we strive to provide quality shoes!")

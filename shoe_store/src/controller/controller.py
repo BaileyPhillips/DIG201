@@ -16,6 +16,7 @@ class Controller:
     def get_cart(self):
         return self._cart
 
+# the models of the style of shoes the user can pick from
     def initialize_store_data(self):
         all_running_shoes = [
             Product("Nike Air Max", 180),
