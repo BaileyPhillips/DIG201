@@ -37,7 +37,7 @@ while not CHECKOUT_FLAG:
         if user_input.isdigit() and int(user_input) in range(1, len(categories) + 1):
             valid_input = True
         else:
-            print("Please enter a the number of the 3 given options.")
+            print("Please enter a valid number of the 3 given options.")
 
     # Subtract 1 from the user input to get the correct index
     user_input = int(user_input) - 1
